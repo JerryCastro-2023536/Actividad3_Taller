@@ -29,8 +29,39 @@ public class EmpleadosController {
             Empleados createdEmpleado = empleadoService.saveEmpleado(empleados);
             return new ResponseEntity<>(createdEmpleado, HttpStatus.CREATED);
         }catch(IllegalArgumentException e){
-            return  ResponseEntity.badRequest().body(e.getMessage());
+            return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Object> getEmpleadosById(@PathVariable Integer id){
+        try {
+            Empleados buscarEmpleado = empleadoService.getEmpleadoById(id);
+            return new ResponseEntity<>(buscarEmpleado, HttpStatus.OK);
+        } catch (IllegalArgumentException e){
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity <Object> updateEmpleado (@PathVariable Integer id, @Valid @RequestBody Empleados empleados){
+        try{
+            Empleados updatedEmpleado = empleadoService.updateEmpleado(id, empleados);
+            return new ResponseEntity<>(updatedEmpleado, HttpStatus.OK);
+        }catch (IllegalArgumentException e){
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity <Object> deleteEmpleado (@PathVariable Integer id){
+        try{
+            empleadoService.deleteEmpleado(id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }catch(IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
 
 }
