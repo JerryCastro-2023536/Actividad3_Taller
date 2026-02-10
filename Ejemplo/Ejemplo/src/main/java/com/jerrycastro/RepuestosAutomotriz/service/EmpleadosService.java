@@ -1,6 +1,6 @@
 package com.jerrycastro.RepuestosAutomotriz.service;
 
-import com.jerrycastro.RepuestosAutomotriz.model.Empleados;
+import com.jerrycastro.RepuestosAutomotriz.entity.Empleados;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

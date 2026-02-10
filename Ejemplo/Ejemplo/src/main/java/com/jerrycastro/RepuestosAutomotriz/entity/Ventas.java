@@ -1,4 +1,4 @@
-package com.jerrycastro.RepuestosAutomotriz.model;
+package com.jerrycastro.RepuestosAutomotriz.entity;
 
 public class Ventas {
 }

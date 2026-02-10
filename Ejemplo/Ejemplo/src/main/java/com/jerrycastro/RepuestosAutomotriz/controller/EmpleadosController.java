@@ -1,6 +1,6 @@
 package com.jerrycastro.RepuestosAutomotriz.controller;
 
-import com.jerrycastro.RepuestosAutomotriz.model.Empleados;
+import com.jerrycastro.RepuestosAutomotriz.entity.Empleados;
 import com.jerrycastro.RepuestosAutomotriz.service.EmpleadosService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;

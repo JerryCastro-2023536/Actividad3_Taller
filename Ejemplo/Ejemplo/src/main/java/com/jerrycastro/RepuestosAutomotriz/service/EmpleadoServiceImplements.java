@@ -1,6 +1,6 @@
 package com.jerrycastro.RepuestosAutomotriz.service;
 
-import com.jerrycastro.RepuestosAutomotriz.model.Empleados;
+import com.jerrycastro.RepuestosAutomotriz.entity.Empleados;
 import com.jerrycastro.RepuestosAutomotriz.repository.EmpleadoRepository;
 import org.springframework.stereotype.Service;
 
