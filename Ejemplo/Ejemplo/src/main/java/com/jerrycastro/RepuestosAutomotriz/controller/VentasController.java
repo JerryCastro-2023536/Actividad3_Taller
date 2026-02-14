@@ -28,7 +28,7 @@ public class VentasController {
         try{
             Ventas buscarVenta = ventasService.getVentasById(id);
             return new ResponseEntity<>(buscarVenta, HttpStatus.OK);
-        }catch(IllegalArgumentException e){
+        }catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
