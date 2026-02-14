@@ -1,7 +1,9 @@
 package com.jerrycastro.RepuestosAutomotriz.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -12,18 +14,23 @@ public class Ventas {
     @Column(name = "id_venta")
     private Integer id_venta;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "fecha_venta")
-    private Date fecha_venta;
+    private LocalDate fecha_venta;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "cantidad")
     private Integer cantidad;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column (name = "total")
     private Double total;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "id_empleado")
     private Integer id_empleado;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "id_repuesto")
     private Integer id_repuesto;
 
@@ -35,11 +42,11 @@ public class Ventas {
         this.id_venta = id_venta;
     }
 
-    public Date getFecha_venta() {
+    public LocalDate getFecha_venta() {
         return fecha_venta;
     }
 
-    public void setFecha_venta(Date fecha_venta) {
+    public void setFecha_venta(LocalDate fecha_venta) {
         this.fecha_venta = fecha_venta;
     }
 
