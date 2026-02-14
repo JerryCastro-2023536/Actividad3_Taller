@@ -1,6 +1,7 @@
 package com.jerrycastro.RepuestosAutomotriz.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 // Que es Entity: una entidad en spring boot es una clase anotada
 // con entity que representa una tabla en una base de datos relacional
@@ -17,15 +18,19 @@ public class Empleados {
     @Column(name = "id_empleado")
     private Integer id_empleado;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "nombre_empleado")
     private String nombre_empleado;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "apellido_empleado")
     private String apellido_empleado;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "puesto_empleado")
     private String puesto_empleado;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "email_empleado")
     private String email_empleado;
 
