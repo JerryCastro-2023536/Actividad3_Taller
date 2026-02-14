@@ -1,6 +1,8 @@
 package com.jerrycastro.RepuestosAutomotriz.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "Repuestos")
@@ -10,18 +12,23 @@ public class Repuestos {
     @Column(name = "id_repuesto")
     private Integer id_repuesto;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "nombre_repuesto")
     private String nombre_repuesto;
 
+    @NotBlank(message = "El campo no debe ir vacio")
     @Column(name = "categoria_repuesto")
     private String categoria_repuesto;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "precio_compra")
     private Double precio_compra;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "precio_venta")
     private Double precio_venta;
 
+    @NotNull(message = "El campo no debe ir vacio")
     @Column(name = "id_proveedor")
     private Integer id_proveedor;
 
